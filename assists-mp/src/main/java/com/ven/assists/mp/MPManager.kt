@@ -194,6 +194,7 @@ object MPManager {
      * @param timeOut 超时时间，默认5000毫秒
      * @return 权限是否获取成功
      */
+    @RequiresApi(Build.VERSION_CODES.N)
     suspend fun request(autoAllow: Boolean = true, timeOut: Long = 5000): Boolean {
         var projectionManager: MediaProjectionManager? = null
         AssistsService.instance?.let {

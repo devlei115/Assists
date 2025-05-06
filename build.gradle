@@ -5,13 +5,13 @@ buildscript {
     ext {
         // SDK 版本
         compileSdk = 34
-        minSdk = 24
+        minSdk = 23
         targetSdk = 33
         
         // 应用版本
         versionCode = 9
-        versionName = "3.2.16"
-        mavenVersion = "3.2.16"
+        versionName = "3.2.16.a"
+        mavenVersion = "3.2.16.a"
         
         // 依赖库版本
         coreKtxVersion = "1.13.1"

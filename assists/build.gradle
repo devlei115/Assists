@@ -49,17 +49,21 @@ dokkaHtml {
 //    }
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                from components.release
-                groupId = 'com.github.ven-coder'
-                artifactId = 'assists-base'
-                version = rootProject.ext.mavenVersion
-            }
-        }
-    }
-}
+//afterEvaluate {
+//    publishing {
+//        publications {
+//            release(MavenPublication) {
+//                from components.release
+//                groupId = 'com.github.ven-coder'
+//                artifactId = 'assists-base'
+//                version = rootProject.ext.mavenVersion
+//            }
+//        }
+//    }
+//}
+
+//aar打包
+//apply from: 'aliyun-maven-push.gradle'
+apply from: 'aliyun-maven-push_gradle7.gradle'
 
 

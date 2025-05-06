@@ -1,0 +1,21 @@
+dependencyResolutionManagement {
+    repositories {
+        maven {
+            url 'https://maven.aliyun.com/repository/public'
+        }
+        maven {
+            credentials {
+                username '6363548c7b63b44dd7c0b7aa'
+                password '4(0Vzw1_hgrA'
+            }
+            url 'https://packages.aliyun.com/maven/repository/2416122-release-rdiwXm/'
+        }
+        maven {
+            credentials {
+                username '6363548c7b63b44dd7c0b7aa'
+                password '4(0Vzw1_hgrA'
+            }
+            url 'https://packages.aliyun.com/maven/repository/2416122-snapshot-opnzvN/'
+        }
+    }
+}

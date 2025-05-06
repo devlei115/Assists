@@ -17,6 +17,7 @@ import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import android.view.accessibility.AccessibilityNodeInfo
+import androidx.annotation.RequiresApi
 import androidx.core.graphics.toColorInt
 import androidx.core.os.bundleOf
 import com.blankj.utilcode.util.ActivityUtils
@@ -491,6 +492,7 @@ object AssistsCore {
      * @param nonTouchableWindowDelay 窗口变为不可触摸后的延迟时间
      * @return 手势是否执行成功
      */
+    @RequiresApi(Build.VERSION_CODES.N)
     suspend fun dispatchGesture(
         gesture: GestureDescription,
         nonTouchableWindowDelay: Long = 100,
@@ -527,6 +529,7 @@ object AssistsCore {
      * @param duration 手势持续时间
      * @return 手势是否执行成功
      */
+    @RequiresApi(Build.VERSION_CODES.N)
     suspend fun gesture(
         startLocation: FloatArray,
         endLocation: FloatArray,
@@ -546,6 +549,7 @@ object AssistsCore {
      * @param duration 手势持续时间
      * @return 手势是否执行成功
      */
+    @RequiresApi(Build.VERSION_CODES.N)
     suspend fun gesture(
         path: Path,
         startTime: Long,
@@ -612,6 +616,7 @@ object AssistsCore {
      * @param duration 点击持续时间
      * @return 手势是否执行成功
      */
+    @RequiresApi(Build.VERSION_CODES.N)
     suspend fun gestureClick(
         x: Float,
         y: Float,
@@ -632,6 +637,7 @@ object AssistsCore {
      * @param duration 点击持续时间
      * @return 手势是否执行成功
      */
+    @RequiresApi(Build.VERSION_CODES.N)
     suspend fun AccessibilityNodeInfo.nodeGestureClick(
         offsetX: Float = ScreenUtils.getScreenWidth() * 0.01953f,
         offsetY: Float = ScreenUtils.getScreenWidth() * 0.01953f,
@@ -652,6 +658,7 @@ object AssistsCore {
         return result
     }
 
+    @RequiresApi(Build.VERSION_CODES.N)
     suspend fun AccessibilityNodeInfo.nodeGestureClickByDouble(
         offsetX: Float = ScreenUtils.getScreenWidth() * 0.01953f,
         offsetY: Float = ScreenUtils.getScreenWidth() * 0.01953f,
@@ -865,6 +872,7 @@ object AssistsCore {
         return performAction(AccessibilityNodeInfo.ACTION_SCROLL_BACKWARD)
     }
 
+    @RequiresApi(Build.VERSION_CODES.N)
     suspend fun launchApp(intent: Intent): Boolean {
         val completableDeferred = CompletableDeferred<Boolean>()
         val view = View(AssistsService.instance).apply {
@@ -892,6 +900,7 @@ object AssistsCore {
     }
 
 
+    @RequiresApi(Build.VERSION_CODES.N)
     suspend fun launchApp(packageName: String): Boolean {
         val completableDeferred = CompletableDeferred<Boolean>()
         val view = View(AssistsService.instance).apply {
